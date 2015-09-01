@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <include layout="@layout/toolbar_actionbar" />
+
+    <ImageView
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        android:layout_marginTop="@dimen/interval_width_large"
+        android:layout_marginBottom="@dimen/interval_width_normal"
+        android:src="@mipmap/logo_about"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/interval_width_large"
+        android:text="@string/app_name"
+        style="@style/TextViewBrand"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_email"
+        style="@style/TextViewEmail"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/interval_width_normal"
+        android:text="@string/about_copyright"
+        style="@style/TextViewCopyright"/>
+
+</LinearLayout>

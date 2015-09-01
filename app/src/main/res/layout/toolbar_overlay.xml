@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_overlay"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/interval_width_small"
+    android:paddingBottom="@dimen/interval_width_small"
+    android:background="@color/overlay_menu_background">
+
+    <TextView
+        android:id="@+id/overlay_item_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_recommend"
+        style="@style/OverlayMenuItem" />
+
+    <TextView
+        android:id="@+id/overlay_item_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_suggest"
+        style="@style/OverlayMenuItem" />
+
+    <TextView
+        android:id="@+id/overlay_item_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_about"
+        style="@style/OverlayMenuItem" />
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/secondary_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:layout_below="@+id/toolbar_actionbar"
+            android:background="@color/background_dark"/>
+
+        <include
+            layout="@layout/emptyview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/primary_list"/>
+
+        <ListView
+            android:id="@id/primary_list"
+            android:layout_width="@dimen/primary_list_width"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:choiceMode="singleChoice"
+            android:layout_below="@id/toolbar_actionbar" />
+
+        <include
+            android:id="@id/toolbar_actionbar"
+            layout="@layout/toolbar_actionbar" />
+
+        <include layout="@layout/toolbar_overlay" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/launch_splash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/launch_splash"
+        android:scaleType="centerCrop"/>
+
+</merge>

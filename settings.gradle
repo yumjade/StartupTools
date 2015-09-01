@@ -1,0 +1,1 @@
+include ':app', ':libraries:SwipeBackLayout', ':libraries:umeng_sdk_analytics_update'

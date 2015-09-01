@@ -1,0 +1,4 @@
+storeFile=../keystore/startuptoolsandroid-release.keystore
+storePassword=startuptools-release
+keyAlias=startuptoolsandroid-release
+keyPassword=startuptools-release

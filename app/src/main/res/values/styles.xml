@@ -1,0 +1,98 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="ActionBarPrimary" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/text_color_title</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="CustomActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:titleTextStyle">@style/ActionBarPrimary</item>
+        <item name="titleTextStyle">@style/ActionBarPrimary</item>
+    </style>
+
+    <style name="TextAppearanceItem">
+        <item name="android:textColor">@color/theme_primary_dark</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="PrimaryListItem">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:background">@drawable/item_background_base</item>
+    </style>
+
+
+    <style name="SecondaryListItem">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/primary_list_width</item>
+        <item name="android:textColor">@color/text_color_normal</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:background">@drawable/item_background_base</item>
+    </style>
+
+    <style name="OverlayMenuItem">
+        <item name="android:paddingTop">@dimen/interval_width_small</item>
+        <item name="android:paddingBottom">@dimen/interval_width_small</item>
+        <item name="android:paddingLeft">@dimen/interval_width_normal</item>
+        <item name="android:paddingRight">@dimen/interval_width_normal</item>
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textSize">@dimen/text_size_xxlarge</item>
+    </style>
+
+    <style name="TextViewHighlight">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextViewContent">
+        <item name="android:textColor">@color/text_color_normal</item>
+        <item name="android:textSize">@dimen/text_size_xmedium</item>
+    </style>
+
+    <style name="TextViewTitle">
+        <item name="android:textColor">@color/text_color_title</item>
+        <item name="android:textSize">@dimen/text_size_xxlarge</item>
+    </style>
+
+    <style name="FloatingActionButton">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color_white</item>
+        <item name="android:textSize">@dimen/text_size_xmedium</item>
+    </style>
+
+    <style name="EmptyViewTextView">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color_hint</item>
+        <item name="android:textSize">@dimen/text_size_xmedium</item>
+    </style>
+
+    <style name="TextViewBrand">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/brand</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="TextViewEmail">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_color_normal</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">#EEEEEE</item>
+    </style>
+
+    <style name="TextViewCopyright">
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:textColor">@color/text_color_hint</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="SingleLineEditText"></style>
+
+</resources>

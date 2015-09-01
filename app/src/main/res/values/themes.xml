@@ -1,0 +1,63 @@
+<resources>
+
+    <style name="FrameworkRoot.Theme" parent="Theme.AppCompat.Light" />
+    <style name="FrameworkRoot.Widget" parent="Theme.AppCompat" />
+
+    <!-- Immediate parent theme to specify base values for custom attributes -->
+    <style name="Theme" parent="FrameworkRoot.Theme">
+    </style>
+
+    <style name="Theme.StartUpTools.Base" parent="Theme">
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="colorPrimary">@color/theme_primary</item>
+        <item name="colorPrimaryDark">@color/theme_primary_dark</item>
+        <item name="colorAccent">@color/theme_accent</item>
+        <item name="actionBarStyle">@style/CustomActionBar</item>
+        <item name="android:actionBarStyle">@style/CustomActionBar</item>
+        <item name="android:actionMenuTextColor">@color/theme_primary_dark</item>
+        <item name="actionMenuTextColor">@color/theme_primary_dark</item>
+        <item name="android:actionMenuTextAppearance">@style/TextAppearanceItem</item>
+        <item name="actionMenuTextAppearance">@style/TextAppearanceItem</item>
+        <item name="android:progressDrawable">@color/theme_primary_dark</item>
+        <item name="android:textColorHint">@color/text_color_hint</item>
+    </style>
+
+    <style name="Theme.StartUpTools" parent="Theme.StartUpTools.Base">
+        <!--<item name="android:colorPressedHighlight">@color/background_dark</item>-->
+    </style>
+
+    <style name="Theme.StartUpTools.NoTitleBar" parent="Theme.StartUpTools">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.StartUpTools.NoTitleBar.Translucent" parent="Theme.StartUpTools.NoTitleBar">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Theme.StartUpTools.Tint.0" parent="Theme.StartUpTools.NoTitleBar.Translucent">
+        <item name="colorAccent">@color/primary_list_color_0</item>
+    </style>
+    <style name="Theme.StartUpTools.Tint.1" parent="Theme.StartUpTools.NoTitleBar.Translucent">
+        <item name="colorAccent">@color/primary_list_color_1</item>
+    </style>
+    <style name="Theme.StartUpTools.Tint.2" parent="Theme.StartUpTools.NoTitleBar.Translucent">
+        <item name="colorAccent">@color/primary_list_color_2</item>
+    </style>
+    <style name="Theme.StartUpTools.Tint.3" parent="Theme.StartUpTools.NoTitleBar.Translucent">
+        <item name="colorAccent">@color/primary_list_color_3</item>
+    </style>
+    <style name="Theme.StartUpTools.Tint.4" parent="Theme.StartUpTools.NoTitleBar.Translucent">
+        <item name="colorAccent">@color/primary_list_color_4</item>
+    </style>
+    <style name="Theme.StartUpTools.Tint.5" parent="Theme.StartUpTools.NoTitleBar.Translucent">
+        <item name="colorAccent">@color/primary_list_color_5</item>
+    </style>
+    <style name="Theme.StartUpTools.Tint.6" parent="Theme.StartUpTools.NoTitleBar.Translucent">
+        <item name="colorAccent">@color/primary_list_color_6</item>
+    </style>
+    <style name="Theme.StartUpTools.Tint.7" parent="Theme.StartUpTools.NoTitleBar.Translucent">
+        <item name="colorAccent">@color/primary_list_color_7</item>
+    </style>
+
+</resources>

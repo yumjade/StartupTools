@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.loopeer.android.apps.startuptools.ui.view.BezelImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/product_imageView_logo"
+                android:layout_width="@dimen/logo_width"
+                android:layout_height="@dimen/logo_height"
+                android:layout_marginBottom="@dimen/interval_width_normal"
+                android:layout_marginTop="@dimen/interval_width_normal"
+                android:src="@mipmap/logo_placeholder"
+                android:scaleType="fitCenter"
+                android:background="@drawable/round_rect_drawable"
+                app:maskDrawable="@drawable/round_rect_drawable"/>
+
+            <TextView
+                android:id="@+id/product_textView_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="品读"
+                style="@style/TextViewTitle"/>
+
+            <TextView
+                android:id="@+id/product_textView_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="http://www.pindu.com"
+                style="@style/TextViewHighlight"
+                android:padding="4dp"
+                android:background="?android:attr/selectableItemBackground"/>
+
+            <View
+                android:layout_width="48dp"
+                android:layout_height="2dp"
+                android:background="?colorAccent"/>
+
+            <TextView
+                android:id="@+id/product_textView_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/interval_width_normal"
+                android:text="品读是一款以用户收集为基础的个性化阅读软件。"
+                style="@style/TextViewContent"
+                android:lineSpacingMultiplier="1.2"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/fab"
+        layout="@layout/include_floating_action_button"/>
+
+</FrameLayout>

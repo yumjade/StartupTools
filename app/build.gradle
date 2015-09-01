@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+//apply from: "$rootDir/android-common-task.gradle"
+
+def versionMajor = 1
+def versionMinor = 0
+def versionPatch = 0
+def versionBuild = 6  // bump for dogfood builds, public betas, etc.
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.loopeer.android.apps.startuptools"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+    }
+
+    signingConfigs {
+        release
+    }
+
+    productFlavors {
+        xiaomi {
+        }
+        qihu360 {
+        }
+        baidu {
+        }
+        wandoujia {
+        }
+        _91wuxian {
+        }
+        yingyongbao {
+        }
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            //applicationIdSuffix '.dev'
+            versionNameSuffix '-SNAPSHOT'
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+
+            proguardFile '../proguard/proguard-gson.pro'
+            proguardFile '../proguard/proguard-butterknife.pro'
+            proguardFile '../proguard/proguard-umeng.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    lintOptions {
+        // set to true to turn off analysis progress reporting by lint
+        quiet true
+        // if true, stop the gradle build if errors are found
+        abortOnError false
+        // if true, only report errors
+        ignoreWarnings true
+    }
+}
+
+repositories {
+    maven {url "${System.env.HOME}/.m2/repository"}
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.laputapp:laputapp:1.0.4'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+    compile libs.appcompatV7
+    compile libs.okhttp
+    compile libs.okhttpurlconnection
+    compile libs.retrofit
+    compile libs.picasso
+    compile libs.butterknife
+
+    compile project(":libraries:SwipeBackLayout")
+    compile project(":libraries:umeng_sdk_analytics_update")
+}
+
+apply from: "${project(':').projectDir}/config/static_analysis.gradle"
+
+
+clean.doLast {
+    project.delete "$rootProject.projectDir/apks"
+}
+
+def env = System.getProperties()
+if (env['com.android.studio.gradle.project.path'] != null) {
+    project.ext.buildFromAndroidStudio = true
+}
+
+if (project.hasProperty('keyAlias') &&
+        project.hasProperty('storeFile') &&
+        project.hasProperty('storePassword') &&
+        project.hasProperty('keyPassword')) {
+    android.signingConfigs.release.keyAlias = keyAlias
+    android.signingConfigs.release.storeFile = file(storeFile)
+    android.signingConfigs.release.storePassword = storePassword
+    android.signingConfigs.release.keyPassword = keyPassword
+} else {
+    android.buildTypes.release.signingConfig = null
+}
+

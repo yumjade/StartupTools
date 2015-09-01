@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile libs.appcompatV7
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+}

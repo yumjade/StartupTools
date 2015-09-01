@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/interval_width_small">
+
+    <com.loopeer.android.apps.startuptools.ui.view.BezelImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/products_imageView_logo"
+        android:layout_width="@dimen/logo_width"
+        android:layout_height="@dimen/logo_height"
+        android:layout_marginRight="@dimen/interval_width_small"
+        android:src="@mipmap/logo_placeholder"
+        android:scaleType="fitCenter"
+        android:background="@drawable/round_rect_drawable"
+        app:maskDrawable="@drawable/round_rect_drawable"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/products_textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/interval_width_xsmall"
+            android:text="品读"
+            style="@style/TextViewHighlight"/>
+
+        <TextView
+            android:id="@+id/products_textView_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="品读是一款以用户收集为基础的个性化阅读软件。"
+            android:maxLines="2"
+            style="@style/TextViewContent"/>
+
+    </LinearLayout>
+
+</LinearLayout>

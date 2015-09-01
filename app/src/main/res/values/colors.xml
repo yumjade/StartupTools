@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="windowBackground">@android:color/white</color>
+    <color name="theme_primary">@android:color/white</color>
+    <color name="theme_primary_dark">@android:color/black</color>
+    <color name="theme_primary_light">@android:color/black</color>
+    <color name="theme_accent">#354986</color>
+    <color name="theme_accent_light">#80354986</color>
+
+    <color name="brand">#1c2a66</color>
+
+    <color name="divider">#CCCCCC</color>
+
+    <!--<color name="primary_btn_normal">#D32F2F</color>
+    <color name="primary_btn_pressed">#80D32F2F</color>
+    <color name="secondary_btn_normal">@android:color/white</color>
+    <color name="secondary_btn_pressed">#80FFFFFF</color>
+    <color name="tertiary_btn_normal">#FF9900</color>
+    <color name="tertiary_btn_pressed">#80FF9900</color>
+    <color name="btn_disable">#CCCCCC</color>
+    <color name="gray_btn_normal">#CCCCCC</color>
+    <color name="gray_btn_pressed">#80CCCCCC</color>-->
+
+    <color name="background_light">#FFFFFF</color>
+    <color name="background_dark">#EEEEEE</color>
+    <color name="overlay_menu_background">@android:color/black</color>
+
+    <color name="text_color_title">#333333</color>
+    <color name="text_color_normal">#555555</color>
+    <color name="text_color_hint">#CCCCCC</color>
+    <color name="text_color_white">@android:color/white</color>
+
+    <color name="primary_list_color_0">#1ca975</color>
+    <color name="primary_list_color_1">#d13153</color>
+    <color name="primary_list_color_2">#0b92bf</color>
+    <color name="primary_list_color_3">#755295</color>
+    <color name="primary_list_color_4">#00afa1</color>
+    <color name="primary_list_color_5">#dfb60a</color>
+    <color name="primary_list_color_6">#00b666</color>
+    <color name="primary_list_color_7">#376caa</color>
+
+    <array name="primary_list_colors">
+        <item>@color/primary_list_color_0</item>
+        <item>@color/primary_list_color_1</item>
+        <item>@color/primary_list_color_2</item>
+        <item>@color/primary_list_color_3</item>
+        <item>@color/primary_list_color_4</item>
+        <item>@color/primary_list_color_5</item>
+        <item>@color/primary_list_color_6</item>
+        <item>@color/primary_list_color_7</item>
+    </array>
+
+</resources>

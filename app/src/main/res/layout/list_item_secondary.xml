@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/secondary_textView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/secondary_list_item_height"
+    style="@style/SecondaryListItem"/>
